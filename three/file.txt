@@ -22,3 +22,5 @@ git log —oneline   // flag to display data in short
 .gitignore
 
 .gitkeep ->it is added in empty folders which we want to keep, otherwise empty folders are ignored by git so if we want to keep it we add .gitkeep in that folder.
+
+git branch ->to check branch 
