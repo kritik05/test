@@ -1,0 +1,24 @@
+git
+
+git config - -list 
+
+git status
+
+git init
+git init adds a .git hidden folder ,the directory then become tracked and a repositery is initialised.
+
+git add <file> <file2> to add that file to repositery so that it can be tracked
+earlier with the help of init we have initialised the repositery
+
+git commit -m “<message>”
+now this pushes the file into repo
+earlier with add they were in stagent phase but not pushed into repo
+
+git log
+log of all the commit performed
+
+git log —oneline   // flag to display data in short
+
+.gitignore
+
+.gitkeep ->it is added in empty folders which we want to keep, otherwise empty folders are ignored by git so if we want to keep it we add .gitkeep in that folder.
