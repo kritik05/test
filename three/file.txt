@@ -94,3 +94,14 @@ git reflog     //similar to log but more detailed
 
 git reset --hard <commit-hash>  //to move to a previous commit
 
+git remote -v    // list of remote connection established
+
+git remote add origin https://url.git
+
+git push -u origin main  //main is the branch name and origin is remote name
+
+
+
+
+
+
