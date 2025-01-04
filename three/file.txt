@@ -31,3 +31,66 @@ git switch <branchname> to switch to that particular branch
 git checkout <branchname>to switch to that particular branch
 
 git switch -c <branchname> creates if not exist and shift to branch while normal switch only switches to the branch if it exists 
+
+now to the another branch into main branch we use 
+
+merge <branchname> 
+
+if there is no conflict it will be simple fast forward merge
+otherwise need to resolve the conflict and then
+add <the conflicting file>
+commit -m "message"
+
+git branch -m <old-branchname> <new-branchname> //rename branchname
+
+git branch -d <branchname>  //delete branch
+
+git diff branch-name-one..branch-name-two   //compare difference in 2 branches
+git diff commit-hash-one..commit-hash-two
+//comparing hash, you can get hash from the lg--oneline which give hash of each commit and stagent 
+
+git diff --staged
+This command shows the changes between your last commit and the staging area
+
+Stash is a way to save your changes in a temporary location. It is useful when you want to make changes to a file but don’t want to commit them yet. You can then come back to the file later and apply the changes.
+
+git stash
+Saves all modified and staged changes in a temporary stash.
+
+git stash list
+
+git stash push -m "message"
+Saves the stash with a descriptive message for easier identification.
+
+git stash apply
+Applies the latest stash (stash@{0}) to your working directory but keeps it in the stash list.
+
+git stash apply stash@{0}
+Applies a specific stash by its index, which you can find using git stash list.
+
+git stash pop
+Applies the most recent stash and removes it from the stash list.
+Can also target a specific stash (e.g., git stash pop stash@{1}).
+
+git stash drop stash@{0}
+Removes a specific stash from the stash list without applying it.
+
+git stash clear
+
+
+git tag
+
+git tag <tag-name> <commit-hash>
+
+git tag -d <tag-name> //delete a tag
+
+git push <remote repositery > <tag name>  push a tag name to remote repositery
+git push <remote repositery >:<tag name>  push a tag name to remote repositery
+
+move to another branch and then
+git rebase main
+
+git reflog     //similar to log but more detailed
+
+git reset --hard <commit-hash>  //to move to a previous commit
+
